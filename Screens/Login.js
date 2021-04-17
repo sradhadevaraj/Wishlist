@@ -6,15 +6,15 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Login(props) {
+function Login({ navigation }) {
   return (
-    <View style={{ backgroundColor: "#FAF9F6", flex: 1 }}>
+    <View style={{ backgroundColor: "#FAF9F6", flex: 1, marginTop: 40 }}>
       <View
         style={{
           //backgroundColor: "violet",
           width: wp("50%"),
           height: hp("15%"),
-          marginTop: 110,
+          marginTop: 80,
           alignItems: "center",
           alignSelf: "center",
           justifyContent: "center",
@@ -95,6 +95,7 @@ function Login(props) {
           justifyContent: "center",
           elevation: 3,
         }}
+        onPress={() => navigation.navigate("Home")}
       >
         <Text
           style={{
@@ -111,6 +112,7 @@ function Login(props) {
           marginTop: 80,
           fontSize: 11,
         }}
+        onPress={() => navigation.navigate("SignUp")}
       >
         Don't have an account? Sign up
       </Text>

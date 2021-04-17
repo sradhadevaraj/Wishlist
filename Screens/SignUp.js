@@ -6,7 +6,7 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Login(props) {
+function Login({ navigation }) {
   return (
     <View style={{ backgroundColor: "#FAF9F6", flex: 1 }}>
       <View

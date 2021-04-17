@@ -46,7 +46,7 @@ const DATA = [
   },
 ];
 
-function Fashion(props) {
+function Fashion([navigation]) {
   const rendeItem = ({ item }) => (
     <View
       style={{

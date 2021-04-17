@@ -5,13 +5,12 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Address(props) {
+function Address({ navigation }) {
   return (
     <View
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <TextInput
@@ -21,7 +20,7 @@ function Address(props) {
           height: hp("12%"),
           elevation: 3,
           marginLeft: 15,
-          marginTop: 10,
+          marginTop: 20,
           paddingLeft: 10,
         }}
         placeholder="Full name"

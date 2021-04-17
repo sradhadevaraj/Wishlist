@@ -62,25 +62,27 @@ const DATA = [
   },
 ];
 
-function Men(props) {
+function Men({ navigation }) {
   const rendeItem = ({ item }) => (
     <TouchableOpacity
       style={{
         backgroundColor: item.color,
         width: wp("29%"),
-        height: hp("28%"),
+        height: hp("35%"),
         alignSelf: "center",
         margin: 5,
         marginTop: 20,
         elevation: 3,
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Image
         style={{
           width: "60%",
-          height: "100%",
+          height: "80%",
           marginLeft: 6,
-          alignSelf: "flex-end",
+          // alignSelf: "flex-end",
         }}
         source={item.image}
       />
@@ -91,32 +93,11 @@ function Men(props) {
   );
 
   return (
-    <View style={{ backgroundColor: "#FAF9F6", flex: 1, marginTop: 40 }}>
-      <View
-        style={{
-          //backgroundColor: "yellow",
-          width: wp("100%"),
-          height: hp("10%"),
-          marginTop: 40,
-          justifyContent: "center",
-        }}
-      >
-        <Text
-          style={{
-            marginLeft: 15,
-            fontSize: 18,
-            fontWeight: "bold",
-          }}
-        >
-          MEN
-        </Text>
-      </View>
-
+    <View style={{ backgroundColor: "#FAF9F6", flex: 1 }}>
       <View
         style={{
           //  backgroundColor: "cyan",
-          width: wp("100%"),
-          height: hp("110%"),
+          flex: 1,
           justifyContent: "center",
           alignItems: "center",
         }}

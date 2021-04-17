@@ -5,13 +5,12 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Cart(props) {
+function Cart({ navigation }) {
   return (
     <View
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <View

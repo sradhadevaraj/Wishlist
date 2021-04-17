@@ -123,7 +123,7 @@ const DETAILS = [
   },
 ];
 
-function Home(props) {
+function Home({ navigation }) {
   const rendeItem = ({ item }) => (
     <TouchableOpacity
       style={{
@@ -131,6 +131,7 @@ function Home(props) {
         justifyContent: "center",
         alignItems: "center",
       }}
+      onPress={() => navigation.navigate("Fashion")}
     >
       <View
         style={{
@@ -167,6 +168,7 @@ function Home(props) {
           marginLeft: 10,
           elevation: 3,
         }}
+        onPress={() => navigation.navigate("Selectedtwo")}
       >
         <Image style={{ width: "100%", height: "100%" }} source={item.image} />
       </TouchableOpacity>
@@ -241,7 +243,7 @@ function Home(props) {
           width: wp("90%"),
           height: hp("12%"),
           elevation: 3,
-          marginTop: 50,
+          marginTop: 10,
           alignSelf: "center",
           alignItems: "center",
           paddingLeft: 10,
@@ -267,8 +269,6 @@ function Home(props) {
             // backgroundColor: "pink",
             width: wp("100%"),
             height: hp("25%"),
-
-            marginTop: 15,
           }}
         >
           <FlatList

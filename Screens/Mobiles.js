@@ -43,7 +43,7 @@ function Fashion({ navigation }) {
         height: hp("40%"),
         alignSelf: "center",
       }}
-      onPress={() => navigation.navigate("Men")}
+      onPress={() => navigation.navigate("Selected")}
     >
       <View
         style={{

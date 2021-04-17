@@ -4,13 +4,12 @@ import {
   widthPercentageToDP as wp,
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
-function Order(props) {
+function Order({ navigation }) {
   return (
     <View
       style={{
         backgroundColor: "#E1E1E1",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <View
@@ -66,6 +65,7 @@ function Order(props) {
             marginTop: 10,
             elevation: 3,
           }}
+          onPress={() => navigation.navigate("Address")}
         >
           <Text
             style={{
@@ -248,6 +248,7 @@ function Order(props) {
               justifyContent: "center",
               alignSelf: "center",
             }}
+            onPress={() => navigation.navigate("Payment")}
           >
             <Text
               style={{

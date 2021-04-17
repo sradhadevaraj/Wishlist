@@ -5,13 +5,12 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Payment(props) {
+function Payment({ navigation }) {
   return (
     <View
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <View
@@ -192,6 +191,7 @@ function Payment(props) {
               alignSelf: "center",
               fontSize: 18,
             }}
+            onPress={() => navigation.navigate("OrderPlaced")}
           >
             Continue
           </Text>

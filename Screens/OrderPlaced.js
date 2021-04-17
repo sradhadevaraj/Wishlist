@@ -6,13 +6,13 @@ import {
 } from "react-native-responsive-screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-function OrderPlaced(props) {
+function OrderPlaced({ navigation }) {
   return (
     <View
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
+
         alignItems: "center",
       }}
     >
@@ -88,11 +88,12 @@ function OrderPlaced(props) {
           width: wp("90%"),
           height: hp("13%"),
           alignSelf: "center",
-          marginTop: 150,
+          marginTop: 190,
           borderRadius: 40,
           justifyContent: "center",
           elevation: 3,
         }}
+        onPress={() => navigation.navigate("Home")}
       >
         <Text
           style={{

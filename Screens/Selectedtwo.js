@@ -5,13 +5,12 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Selectedtwo(props) {
+function Selectedtwo({ navigation }) {
   return (
     <View
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <View
@@ -305,6 +304,7 @@ function Selectedtwo(props) {
                 elevation: 3,
                 justifyContent: "center",
               }}
+              onPress={() => navigation.navigate("Cart")}
             >
               <Text
                 style={{
@@ -325,6 +325,7 @@ function Selectedtwo(props) {
                 elevation: 3,
                 justifyContent: "center",
               }}
+              onPress={() => navigation.navigate("Order")}
             >
               <Text
                 style={{

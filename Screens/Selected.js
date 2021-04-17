@@ -80,7 +80,7 @@ const DETAILS = [
   },
 ];
 
-function Selected(props) {
+function Selected({ navigation }) {
   const _productrenderitem = ({ item }) => (
     <View
       style={{
@@ -98,6 +98,7 @@ function Selected(props) {
           marginLeft: 10,
           elevation: 3,
         }}
+        onPress={() => navigation.navigate("Selectedtwo")}
       >
         <Image style={{ width: "100%", height: "100%" }} source={item.image} />
       </TouchableOpacity>
@@ -169,7 +170,6 @@ function Selected(props) {
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <TouchableOpacity
@@ -181,6 +181,7 @@ function Selected(props) {
           elevation: 3,
           justifyContent: "center",
         }}
+        onPress={() => navigation.navigate(" Filter")}
       >
         <Text
           style={{

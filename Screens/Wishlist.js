@@ -44,7 +44,7 @@ const DETAILS = [
   },
 ];
 
-function Wishlist(props) {
+function Wishlist({ navigation }) {
   const _productrenderitem = ({ item }) => (
     <View
       style={{
@@ -133,7 +133,6 @@ function Wishlist(props) {
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <FlatList

@@ -5,7 +5,7 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Filter(props) {
+function Filter({ navigation }) {
   return (
     <View
       style={{
@@ -13,7 +13,6 @@ function Filter(props) {
         flex: 1,
         justifyContent: "center",
         flexDirection: "row",
-        marginTop: 40,
       }}
     >
       <View
@@ -252,7 +251,7 @@ function Filter(props) {
             width: wp("50%"),
             height: hp("13%"),
             borderRadius: 40,
-            marginTop: 350,
+            marginTop: 320,
             justifyContent: "center",
             elevation: 3,
           }}
