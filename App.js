@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import Home from "./Screens/Home";
+import Filter from "./Screens/Filter";
+import Fashion from "./Screens/Fashion";
+import Categories from "./Screens/Categories";
+import Men from "./Screens/Men";
+import Selected from "./Screens/Selected";
+import Selectedtwo from "./Screens/Selectedtwo";
+import Order from "./Screens/Order";
+import Payment from "./Screens/Payment";
+import OrderPlaced from "./Screens/OrderPlaced";
+import Login from "./Screens/Login";
+import SignUp from "./Screens/SignUp";
+import Wishlist from "./Screens/Wishlist";
+import Cart from "./Screens/Cart";
+import Address from "./Screens/Address";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import { NavigationContainer } from "@react-navigation/native";
+function App(props) {
+  return <Selectedtwo />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
