@@ -14,6 +14,7 @@ import {
 } from "react-native-responsive-screen";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Rating } from "react-star-ratings";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const DATA = [
   {
@@ -23,25 +24,25 @@ const DATA = [
     image: require("../assets/1.jpg"),
   },
   {
-    id: "1",
+    id: "2",
     color: "#CCCAF0",
     title: "Mobiles",
     image: require("../assets/1.jpg"),
   },
   {
-    id: "1",
+    id: "3",
     color: "#F7E3CC",
     title: "Electronics",
     image: require("../assets/1.jpg"),
   },
   {
-    id: "1",
+    id: "4",
     color: "#C5EABD",
     title: "Furniture",
     image: require("../assets/1.jpg"),
   },
   {
-    id: "1",
+    id: "5",
     color: "#87ceeb",
     title: "Sports",
     image: require("../assets/1.jpg"),
@@ -68,7 +69,7 @@ const DETAILS = [
     offer: "22%off",
   },
   {
-    id: "1",
+    id: "3",
     image: require("../assets/3.jpg"),
     title: "PUMA",
     subTitle: "Sneakers For Men",
@@ -77,7 +78,7 @@ const DETAILS = [
     offer: "22%off",
   },
   {
-    id: "2",
+    id: "4",
     image: require("../assets/4.jpg"),
     title: "PUMA",
     subTitle: "Sneakers For Men",
@@ -86,7 +87,7 @@ const DETAILS = [
     offer: "22%off",
   },
   {
-    id: "1",
+    id: "5",
     image: require("../assets/5.jpg"),
     title: "PUMA",
     subTitle: "Sneakers For Men",
@@ -95,7 +96,7 @@ const DETAILS = [
     offer: "22%off",
   },
   {
-    id: "2",
+    id: "6",
     image: require("../assets/6.jpg"),
     title: "PUMA",
     subTitle: "Sneakers For Men",
@@ -104,7 +105,7 @@ const DETAILS = [
     offer: "22%off",
   },
   {
-    id: "1",
+    id: "7",
     image: require("../assets/7.jpg"),
     title: "PUMA",
     subTitle: "Sneakers For Men",
@@ -113,7 +114,7 @@ const DETAILS = [
     offer: "22%off",
   },
   {
-    id: "2",
+    id: "8",
     image: require("../assets/8.jpg"),
     title: "PUMA",
     subTitle: "Sneakers For Men",
@@ -124,6 +125,29 @@ const DETAILS = [
 ];
 
 function Home({ navigation }) {
+  const onFlatListItemClick = (item) => {
+    switch (item.id) {
+      case "1":
+        navigation.navigate("Fashion");
+        break;
+      case "2":
+        navigation.navigate("Selected");
+        break;
+      case "3":
+        navigation.navigate("Selected");
+        break;
+      case "4":
+        navigation.navigate("Selected");
+        break;
+      case "5":
+        navigation.navigate("Selected");
+        break;
+
+      default:
+        break;
+    }
+  };
+
   const rendeItem = ({ item }) => (
     <TouchableOpacity
       style={{
@@ -131,7 +155,7 @@ function Home({ navigation }) {
         justifyContent: "center",
         alignItems: "center",
       }}
-      onPress={() => navigation.navigate("Fashion")}
+      onPress={() => onFlatListItemClick(item)}
     >
       <View
         style={{
@@ -154,14 +178,14 @@ function Home({ navigation }) {
   const _productrenderitem = ({ item }) => (
     <View
       style={{
-        //  backgroundColor: "cyan",
+        // backgroundColor: "cyan",
         margin: 10,
         justifyContent: "center",
       }}
     >
       <TouchableOpacity
         style={{
-          //backgroundColor: "red",
+          // backgroundColor: "red",
           width: wp("40%"),
           height: hp("40%"),
 
@@ -171,6 +195,13 @@ function Home({ navigation }) {
         onPress={() => navigation.navigate("Selectedtwo")}
       >
         <Image style={{ width: "100%", height: "100%" }} source={item.image} />
+        <MaterialCommunityIcons
+          style={{ position: "absolute", right: 3, top: 5 }}
+          size={20}
+          name="heart"
+          color="grey"
+          onPress={() => navigation.navigate("Wishlist")}
+        />
       </TouchableOpacity>
 
       <Text

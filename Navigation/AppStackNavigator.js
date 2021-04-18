@@ -14,7 +14,7 @@ const window = Dimensions.get("window");
 const windowwidth = Dimensions.get("window").width;
 const windowheight = Dimensions.get("window").height;
 
-import Home from "../Screens/Home";
+import HomeStack from "../Navigation/HomeStack";
 import Filter from "../Screens/Filter";
 import Fashion from "../Screens/Fashion";
 import Categories from "../Screens/Categories";
@@ -29,7 +29,7 @@ import SignUp from "../Screens/SignUp";
 import Wishlist from "../Screens/Wishlist";
 import Cart from "../Screens/Cart";
 import Address from "../Screens/Address";
-import Mobiles from "../Screens/Mobiles";
+
 import Notification from "../Screens/Notification";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -66,11 +66,13 @@ function AppStackNavigator({ navigation }) {
       />
       <Stack.Screen
         name="Home"
-        component={Home}
+        component={HomeStack}
         options={({ navigation }) => {
           return {
+            headerTitle: "Wishlist",
             headerTitleStyle: {
               marginLeft: 35,
+              alignSelf: "center",
             },
             headerLeft: () => {
               return null;
@@ -78,7 +80,7 @@ function AppStackNavigator({ navigation }) {
             headerRight: () => (
               <View
                 style={{
-                  // backgroundColor: "yellow",
+                  //backgroundColor: "yellow",
                   width: windowwidth * 0.95,
                   height: windowheight * 0.06,
                   alignItems: "center",
@@ -192,20 +194,80 @@ function AppStackNavigator({ navigation }) {
         }}
       />
       <Stack.Screen
-        name=" Filter"
+        name="Filter"
         component={Filter}
         options={({ navigation }) => {
           return {
             headerTitleStyle: {
               marginLeft: -20,
             },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
 
-            headerTitle: "",
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
           };
         }}
       />
-      <Stack.Screen name="Wishlist" component={Wishlist} />
-      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen
+        name="Wishlist"
+        component={Wishlist}
+        options={({ navigation }) => {
+          return {
+            headerTitleStyle: {
+              marginLeft: -20,
+            },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
+
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
+          };
+        }}
+      />
+      <Stack.Screen
+        name="Cart"
+        component={Cart}
+        options={({ navigation }) => {
+          return {
+            headerTitleStyle: {
+              marginLeft: -20,
+            },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
+
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
+          };
+        }}
+      />
       <Stack.Screen
         name="Fashion"
         component={Fashion}
@@ -307,7 +369,7 @@ function AppStackNavigator({ navigation }) {
           };
         }}
       />
-      <Stack.Screen name="Mobiles" component={Mobiles} />
+
       <Stack.Screen
         name="Notification"
         component={Notification}

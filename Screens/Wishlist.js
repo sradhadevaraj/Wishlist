@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const DETAILS = [
   {
@@ -64,6 +65,13 @@ function Wishlist({ navigation }) {
         }}
       >
         <Image style={{ width: "100%", height: "100%" }} source={item.image} />
+        <MaterialCommunityIcons
+          style={{ position: "absolute", right: 3, top: 5 }}
+          size={20}
+          name="heart"
+          color="grey"
+          onPress={() => navigation.navigate("Wishlist")}
+        />
       </TouchableOpacity>
 
       <Text

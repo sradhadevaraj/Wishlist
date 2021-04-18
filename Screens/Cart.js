@@ -41,6 +41,7 @@ function Cart({ navigation }) {
             justifyContent: "center",
             marginRight: 15,
           }}
+          onPress={() => navigation.navigate("Address")}
         >
           <Text style={{ alignSelf: "center" }}>Change</Text>
         </TouchableOpacity>

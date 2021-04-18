@@ -3,6 +3,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import AppStackNavigator from "./Navigation/AppStackNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import DrawerContent from "./Navigation/DrawerContent";
+import Filter from "./Screens/Filter";
 
 const Drawer = createDrawerNavigator();
 function App(props) {
@@ -12,6 +13,7 @@ function App(props) {
         <Drawer.Screen name="AppStackNavigator" component={AppStackNavigator} />
       </Drawer.Navigator>
     </NavigationContainer>
+    // <Filter />
   );
 }
 

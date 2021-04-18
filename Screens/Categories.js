@@ -21,32 +21,54 @@ const DATA = [
     color: "#F7CEE2",
   },
   {
-    id: "1",
+    id: "2",
     image: require("../assets/MEN.png"),
     title: "MOBILES",
     color: "#CCCAF0",
   },
   {
-    id: "1",
+    id: "3",
     image: require("../assets/MEN.png"),
     title: "ELECTRONICS",
     color: "#F7E3CC",
   },
   {
-    id: "1",
+    id: "4",
     image: require("../assets/MEN.png"),
     title: "FURNITURE",
     color: "#C5EABD",
   },
   {
-    id: "1",
+    id: "5",
     image: require("../assets/MEN.png"),
     title: "SPORTS",
     color: "#87ceeb",
   },
 ];
 
-function Fashion([navigation]) {
+function Categories({ navigation }) {
+  const onFlatListItemClick = (item) => {
+    switch (item.id) {
+      case "1":
+        navigation.navigate("Fashion");
+        break;
+      case "2":
+        navigation.navigate("Selected");
+        break;
+      case "3":
+        navigation.navigate("Selected");
+        break;
+      case "4":
+        navigation.navigate("Selected");
+        break;
+      case "5":
+        navigation.navigate("Selected");
+        break;
+
+      default:
+        break;
+    }
+  };
   const rendeItem = ({ item }) => (
     <View
       style={{
@@ -67,6 +89,7 @@ function Fashion([navigation]) {
           justifyContent: "space-between",
           flexDirection: "row",
         }}
+        onPress={() => onFlatListItemClick(item)}
       >
         <Text
           style={{
@@ -96,7 +119,6 @@ function Fashion([navigation]) {
       style={{
         backgroundColor: "#FAF9F6",
         flex: 1,
-        marginTop: 40,
       }}
     >
       <FlatList
@@ -108,4 +130,4 @@ function Fashion([navigation]) {
   );
 }
 
-export default Fashion;
+export default Categories;

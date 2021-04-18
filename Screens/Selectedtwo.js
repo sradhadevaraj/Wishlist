@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 function Selectedtwo({ navigation }) {
   return (
@@ -122,6 +123,7 @@ function Selectedtwo({ navigation }) {
               1,701 2,195 22% off
             </Text>
           </View>
+
           <View
             style={{
               // backgroundColor: "red",

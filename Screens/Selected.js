@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const DETAILS = [
   {
@@ -101,6 +102,13 @@ function Selected({ navigation }) {
         onPress={() => navigation.navigate("Selectedtwo")}
       >
         <Image style={{ width: "100%", height: "100%" }} source={item.image} />
+        <MaterialCommunityIcons
+          style={{ position: "absolute", right: 3, top: 5 }}
+          size={20}
+          name="heart"
+          color="grey"
+          onPress={() => navigation.navigate("Wishlist")}
+        />
       </TouchableOpacity>
 
       <Text
@@ -172,27 +180,52 @@ function Selected({ navigation }) {
         flex: 1,
       }}
     >
-      <TouchableOpacity
+      <View
         style={{
-          backgroundColor: "#FAF9F6",
-          width: wp("50%"),
-          height: hp("15%"),
-          alignSelf: "flex-end",
-          elevation: 3,
-          justifyContent: "center",
+          flexDirection: "row",
         }}
-        onPress={() => navigation.navigate(" Filter")}
       >
-        <Text
+        <TouchableOpacity
           style={{
-            alignSelf: "center",
-            fontSize: 16,
+            backgroundColor: "#FAF9F6",
+            width: wp("50%"),
+            height: hp("15%"),
+            alignSelf: "flex-end",
+            elevation: 3,
+            justifyContent: "center",
           }}
+          // onPress={() => navigation.navigate("Filter")}
         >
-          Filter
-        </Text>
-      </TouchableOpacity>
+          <Text
+            style={{
+              alignSelf: "center",
+              fontSize: 16,
+            }}
+          >
+            Sort
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#FAF9F6",
+            width: wp("50%"),
+            height: hp("15%"),
 
+            elevation: 3,
+            justifyContent: "center",
+          }}
+          onPress={() => navigation.navigate("Filter")}
+        >
+          <Text
+            style={{
+              alignSelf: "center",
+              fontSize: 16,
+            }}
+          >
+            Filters
+          </Text>
+        </TouchableOpacity>
+      </View>
       <FlatList
         numColumns={2}
         data={DETAILS}
