@@ -4,7 +4,6 @@ import {
   widthPercentageToDP as wp,
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 function Selectedtwo({ navigation }) {
   return (
