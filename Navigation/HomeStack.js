@@ -6,6 +6,7 @@ import Home from "../Screens/Home";
 import Categories from "../Screens/Categories";
 import Cart from "../Screens/Cart";
 import Wishlist from "../Screens/Wishlist";
+import Profile from "../Screens/Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +38,7 @@ function HomeStack(props) {
           ),
         }}
       />
+
       <Tab.Screen
         name="Wishlist"
         component={Wishlist}
@@ -52,6 +54,15 @@ function HomeStack(props) {
         options={{
           tabBarIcon: ({ size, color }) => (
             <MaterialCommunityIcons name="cart" size={29} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" size={26} color={color} />
           ),
         }}
       />

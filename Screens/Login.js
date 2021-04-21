@@ -8,13 +8,13 @@ import {
 
 function Login({ navigation }) {
   return (
-    <View style={{ backgroundColor: "#FAF9F6", flex: 1, marginTop: 40 }}>
+    <View style={{ backgroundColor: "#FAF9F6", flex: 1 }}>
       <View
         style={{
           //backgroundColor: "violet",
           width: wp("50%"),
           height: hp("15%"),
-          marginTop: 80,
+          marginTop: 110,
           alignItems: "center",
           alignSelf: "center",
           justifyContent: "center",
@@ -90,7 +90,7 @@ function Login({ navigation }) {
           width: wp("90%"),
           height: hp("13%"),
           alignSelf: "center",
-          marginTop: 150,
+          marginTop: 170,
           borderRadius: 40,
           justifyContent: "center",
           elevation: 3,

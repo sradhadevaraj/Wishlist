@@ -29,6 +29,10 @@ import SignUp from "../Screens/SignUp";
 import Wishlist from "../Screens/Wishlist";
 import Cart from "../Screens/Cart";
 import Address from "../Screens/Address";
+import Profile from "../Screens/Profile";
+import Orders from "../Screens/Orders";
+import Reviews from "../Screens/Reviews";
+import ProfileDetails from "../Screens/ProfileDetails";
 
 import Notification from "../Screens/Notification";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -52,7 +56,7 @@ function AppStackNavigator({ navigation }) {
         }}
       />
       <Stack.Screen
-        name=" SignUp"
+        name="SignUp"
         component={SignUp}
         options={({ navigation }) => {
           return {
@@ -324,6 +328,7 @@ function AppStackNavigator({ navigation }) {
         component={Order}
         options={({ navigation }) => {
           return {
+            headerTitle: "Order Summary",
             headerTitleStyle: {
               marginLeft: -20,
             },
@@ -411,6 +416,106 @@ function AppStackNavigator({ navigation }) {
       <Stack.Screen
         name="Address"
         component={Address}
+        options={({ navigation }) => {
+          return {
+            headerTitleStyle: {
+              marginLeft: -20,
+            },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
+
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
+          };
+        }}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={({ navigation }) => {
+          return {
+            headerTitleStyle: {
+              marginLeft: -20,
+            },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
+
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
+          };
+        }}
+      />
+      <Stack.Screen
+        name="Orders"
+        component={Orders}
+        options={({ navigation }) => {
+          return {
+            headerTitleStyle: {
+              marginLeft: -20,
+            },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
+
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
+          };
+        }}
+      />
+      <Stack.Screen
+        name="Reviews"
+        component={Reviews}
+        options={({ navigation }) => {
+          return {
+            headerTitleStyle: {
+              marginLeft: -20,
+            },
+            headerRight: () => (
+              <View
+                style={{
+                  // backgroundColor: "cyan",
+                  width: windowwidth * 0.19,
+                  height: windowheight * 0.06,
+                  alignSelf: "flex-end",
+
+                  marginRight: 15,
+                  justifyContent: "center",
+                  alignItems: "flex-end",
+                }}
+              ></View>
+            ),
+          };
+        }}
+      />
+      <Stack.Screen
+        name="ProfileDetails"
+        component={ProfileDetails}
         options={({ navigation }) => {
           return {
             headerTitleStyle: {

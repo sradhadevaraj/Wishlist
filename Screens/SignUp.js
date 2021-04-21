@@ -6,7 +6,7 @@ import {
   widthPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function Login({ navigation }) {
+function SignUp({ navigation }) {
   return (
     <View style={{ backgroundColor: "#FAF9F6", flex: 1 }}>
       <View
@@ -14,7 +14,7 @@ function Login({ navigation }) {
           //backgroundColor: "violet",
           width: wp("50%"),
           height: hp("15%"),
-          marginTop: 110,
+          marginTop: 80,
           alignItems: "center",
           alignSelf: "center",
           justifyContent: "center",
@@ -75,7 +75,7 @@ function Login({ navigation }) {
           marginTop: 15,
           paddingLeft: 10,
         }}
-        placeholder="Continue Password"
+        placeholder="Confirm password"
         secureTextEntry
       />
 
@@ -85,11 +85,12 @@ function Login({ navigation }) {
           width: wp("90%"),
           height: hp("13%"),
           alignSelf: "center",
-          marginTop: 80,
+          marginTop: 120,
           borderRadius: 40,
           justifyContent: "center",
           elevation: 3,
         }}
+        onPress={() => navigation.navigate("Home")}
       >
         <Text
           style={{
@@ -106,34 +107,35 @@ function Login({ navigation }) {
           width: wp("90%"),
           height: hp("13%"),
           alignSelf: "center",
-          marginTop: 10,
+          marginTop: 15,
           borderRadius: 40,
           justifyContent: "center",
-          elevation: 3,
           borderColor: "black",
-          borderWidth: 0.5,
+          borderWidth: 1,
         }}
+        onPress={() => navigation.navigate("Home")}
       >
         <Text
           style={{
             alignSelf: "center",
-            fontSize: 18,
+            fontSize: 16,
           }}
         >
-          Continue with Google
+          Continue With Google
         </Text>
       </TouchableOpacity>
       <Text
         style={{
           alignSelf: "center",
-          marginTop: 80,
+          marginTop: 70,
           fontSize: 11,
         }}
+        onPress={() => navigation.navigate("Login")}
       >
-        Already have an account? Log in
+        Already have an account? Login
       </Text>
     </View>
   );
 }
 
-export default Login;
+export default SignUp;

@@ -21,31 +21,31 @@ const DATA = [
     id: "1",
     color: "#F7CEE2",
     title: "Fashion",
-    image: require("../assets/1.jpg"),
+    image: require("../assets/Fash-01.png"),
   },
   {
     id: "2",
     color: "#CCCAF0",
     title: "Mobiles",
-    image: require("../assets/1.jpg"),
+    image: require("../assets/mobile-01.png"),
   },
   {
     id: "3",
     color: "#F7E3CC",
     title: "Electronics",
-    image: require("../assets/1.jpg"),
+    image: require("../assets/ele-01.png"),
   },
   {
     id: "4",
     color: "#C5EABD",
     title: "Furniture",
-    image: require("../assets/1.jpg"),
+    image: require("../assets/fur-01.png"),
   },
   {
     id: "5",
     color: "#87ceeb",
     title: "Sports",
-    image: require("../assets/1.jpg"),
+    image: require("../assets/sports.png"),
   },
 ];
 
@@ -165,12 +165,11 @@ function Home({ navigation }) {
           borderRadius: 30,
           marginLeft: 10,
           elevation: 3,
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <Image
-          style={{ width: "100%", height: "100%", borderRadius: 30 }}
-          source={item.image}
-        />
+        <Image style={{ width: "70%", height: "70%" }} source={item.image} />
       </View>
       <Text style={{ fontSize: 12, marginLeft: 8 }}>{item.title}</Text>
     </TouchableOpacity>
